@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenish</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/serenish-logo.png" alt="Serenish Logo">
+        <span>Serenish</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
+        <li><a href="#wellness">Wellness</a></li>
+        <li><a href="#tracker">Habit Tracker</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Welcome to <span>Serenish</span></h1>
+        <p>Your personal companion on the journey to mental wellness and positive habits</p>
+        <button class="cta-button">Start Your Journey</button>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-illustration.svg" alt="Mental wellness illustration">
+      </div>
+    </section>
+
+    <section id="inspiration" class="quotes-section">
+      <div class="section-header">
+        <h2><i class="fas fa-star"></i> Daily Inspiration</h2>
+        <p>Wisdom and motivation to brighten your day</p>
+      </div>
+      <div class="quote-container">
+        <div class="quote-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p id="quote-text">Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change.</p>
+          <p id="quote-author">— Unknown</p>
+        </div>
+        <button id="new-quote-btn" class="primary-button">
+          <i class="fas fa-sync-alt"></i> New Quote
+        </button>
+      </div>
+    </section>
+
+    <section id="wellness" class="wellness-section">
+      <div class="section-header">
+        <h2><i class="fas fa-heart"></i> Wellness Practices</h2>
+        <p>Simple exercises to improve your mental and physical wellbeing</p>
+      </div>
+      <div class="wellness-grid">
+        <div class="wellness-card">
+          <div class="card-icon">
+            <i class="fas fa-wind"></i>
+          </div>
+          <h3>Deep Breathing</h3>
+          <p>Take slow, deep breaths to activate your parasympathetic nervous system and reduce stress.</p>
+          <button class="secondary-button" data-exercise="breathing">Try Now</button>
+        </div>
+        <div class="wellness-card">
+          <div class="card-icon">
+            <i class="fas fa-walking"></i>
+          </div>
+          <h3>Mindful Walking</h3>
+          <p>A short walk with full attention to your surroundings can clear your mind and boost mood.</p>
+          <button class="secondary-button" data-exercise="walking">Try Now</button>
+        </div>
+        <div class="wellness-card">
+          <div class="card-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h3>Quick Stretching</h3>
+          <p>Release tension in your body with these simple stretches you can do anywhere.</p>
+          <button class="secondary-button" data-exercise="stretching">Try Now</button>
+        </div>
+        <div class="wellness-card">
+          <div class="card-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Meditation</h3>
+          <p>Practice mindfulness meditation to improve focus and emotional regulation.</p>
+          <button class="secondary-button" data-exercise="meditation">Try Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="tracker" class="habit-section">
+      <div class="section-header">
+        <h2><i class="fas fa-chart-line"></i> Habit Transformation</h2>
+        <p>Track and transform habits that no longer serve you</p>
+      </div>
+      <div class="habit-container">
+        <div class="habit-form">
+          <div class="form-group">
+            <label for="habit-name">What habit would you like to change?</label>
+            <input type="text" id="habit-name" placeholder="e.g., Procrastination, Negative self-talk">
+          </div>
+          <div class="form-group">
+            <label for="habit-frequency">How often did it occur today?</label>
+            <input type="number" id="habit-frequency" min="0" value="0">
+          </div>
+          <div class="form-group">
+            <label for="habit-alternative">Healthier alternative:</label>
+            <input type="text" id="habit-alternative" placeholder="e.g., Setting small goals, Positive affirmations">
+          </div>
+          <button id="track-habit-btn" class="primary-button">
+            <i class="fas fa-save"></i> Save Entry
+          </button>
+        </div>
+        <div class="habit-stats">
+          <h3>Your Progress</h3>
+          <div id="habit-progress">
+            <p class="empty-state">Your habit tracking data will appear here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="section-header">
+        <h2><i class="fas fa-info-circle"></i> About Serenish</h2>
+        <p>Our mission and approach</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Serenish was created with a simple but powerful mission: to help people cultivate mental wellness through small, consistent actions.</p>
+          <p>Our approach combines evidence-based practices from positive psychology, cognitive behavioral therapy, and mindfulness to provide you with practical tools for everyday wellbeing.</p>
+          <p>We believe that transformation happens one small step at a time, and we're here to support you on that journey.</p>
+        </div>
+        <div class="testimonials">
+          <h3>What Our Creator Says</h3>
+          <div class="testimonial-card">
+            <p>"you deserve to feel the same love you give."</p>
+            <p class="testimonial-author">— krrish</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/serenish-logo-white.png" alt="Serenish Logo">
+        <p>Serenish</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#inspiration">Inspiration</a></li>
+          <li><a href="#wellness">Wellness</a></li>
+          <li><a href="#tracker">Habit Tracker</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Mental Health Articles</a></li>
+          <li><a href="#">Guided Meditations</a></li>
+          <li><a href="#">Wellness Podcast</a></li>
+          <li><a href="#">Community Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for wellness tips and updates</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Serenish. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/krrish_parashar?igsh=cm12NncwejN4b250"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="exercise-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title">Exercise Title</h2>
+      <div id="modal-content">
+        </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
